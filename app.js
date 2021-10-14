@@ -13,8 +13,10 @@ app.set('view engine','ejs');
 
 //get the home page
 app.get("/",function(req,res){
-  console.log(items);
-  res.render("index",{items:items});
+
+  var date = new Date();
+  var day = date.toLocaleDateString("en-US",{weekday:"long",day:"numeric",month:"long"});
+  res.render("index",{day: day, items:items});
 });
 
 //add new item to the home page
