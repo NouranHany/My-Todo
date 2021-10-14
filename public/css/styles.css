@@ -2,7 +2,7 @@ body{
   width: 40%;
   background-image: -webkit-linear-gradient(70deg, #9D84B7 50%, #B2F9FC 50%);
   min-height: 500px;
-  margin: 5% auto 5%;
+  margin: 5% auto 10%;
   font-family: 'Roboto', sans-serif;
   color: #091353;
 }
@@ -54,6 +54,8 @@ button[type="submit"]{
   width:35px;
   border-radius: 10px;
   border: none;
+  vertical-align: center;
+  font-size: 1rem;
 }
 
 button[type="submit"]:hover{

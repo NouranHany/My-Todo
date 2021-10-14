@@ -2,6 +2,7 @@
 //requiring needed modules
 const express = require("express");
 const bodyParser = require("body-parser");
+const day = require(__dirname + "/local_modules/day.js")
 
 const localPort = 3000;
 let items = [];
@@ -13,10 +14,7 @@ app.set('view engine','ejs');
 
 //get the home page
 app.get("/",function(req,res){
-
-  var date = new Date();
-  var day = date.toLocaleDateString("en-US",{weekday:"long",day:"numeric",month:"long"});
-  res.render("index",{day: day, items:items});
+  res.render("index",{day: day.getDay(), items:items});
 });
 
 //add new item to the home page
